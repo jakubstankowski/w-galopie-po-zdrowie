@@ -1,9 +1,10 @@
+import { Footer } from 'src/components/Footer/Footer'
 import { Navbar } from 'src/components/Navbar/Navbar'
 
 export const Home = () => {
   return (
     <>
-      <Navbar transparent />
+      <Navbar />
       <main>
         <div
           className="relative pt-16 pb-32 flex content-center items-center justify-center"
@@ -569,6 +570,7 @@ export const Home = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   )
 }
