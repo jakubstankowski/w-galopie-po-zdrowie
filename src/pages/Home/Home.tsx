@@ -1,5 +1,5 @@
-import { Footer } from 'src/components/Footer/Footer'
-import { Navbar } from 'src/components/Navbar/Navbar'
+import { Footer } from 'src/components/Footer'
+import { Navbar } from 'src/components/Navbar'
 
 export const Home = () => {
   return (
@@ -12,17 +12,8 @@ export const Home = () => {
             minHeight: '75vh',
           }}
         >
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
-            }}
-          >
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-75 bg-black"
-            />
+          <div className="absolute top-0 w-full h-full bg-center  bg-green-700">
+            <span id="blackOverlay" className="w-full h-full absolute" />
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
