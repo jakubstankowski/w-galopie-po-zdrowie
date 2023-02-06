@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { CallButton } from './CallButton'
 
 export const Navbar = () => {
   const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    { name: 'Home', href: '#', current: true },
+    { name: 'O mnie', href: '#', current: false },
+    { name: 'Kontakt', href: '#', current: false },
   ]
 
   const [navbar, setNavbar] = useState(false)
@@ -22,12 +22,13 @@ export const Navbar = () => {
 
   window.addEventListener('scroll', changeNavbarColor)
 
+  function call() {}
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 fixed top-0 p-4 transition-colors ease-in-out delay-250 ${
+      className={`fixed top-0 left-0 right-0 fixed top-0 p-4 transition-colors ease-in-out delay-250 z-50 ${
         colorChange ? 'bg-white' : 'bg-green-700'
       }`}
-      style={{ zIndex: 1000 }}
     >
       <div className="justify-between px-2 mx-auto md:items-center md:flex md:px-3">
         <div>
@@ -74,6 +75,23 @@ export const Navbar = () => {
                   <a href="javascript:void(0)">{nav.name}</a>
                 </li>
               ))}
+              <li>
+                <CallButton
+                  bgColor={colorChange ? 'bg-green-700' : 'bg-white'}
+                  text="Umów wizytę"
+                  phoneNumber="tel:+48792662662"
+                  borderColor={
+                    colorChange ? 'border-green-700' : 'border-white'
+                  }
+                  textColor={colorChange ? 'text-white' : 'bg-green-700'}
+                  hoverTextColor={
+                    colorChange ? 'hover:text-white' : 'hover:text-green-700'
+                  }
+                  hoverBackgroundColor={
+                    colorChange ? 'hover:bg-green-700' : 'hover:bg-white'
+                  }
+                />
+              </li>
             </ul>
           </div>
         </div>
