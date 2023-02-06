@@ -136,6 +136,17 @@ export const Home = () => {
                   className="w-full rounded-lg"
                   src={require('assets/img/woman.png')}
                 />
+                <div className="flex justify-center mt-7">
+                  <CallButton
+                    bgColor="bg-white"
+                    text="Umów wizytę"
+                    phoneNumber="tel:+48792662662"
+                    borderColor="border-green-700"
+                    textColor="text-green-700"
+                    hoverTextColor="hover:text-green-700"
+                    hoverBackgroundColor="hover:bg-white"
+                  />
+                </div>
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
