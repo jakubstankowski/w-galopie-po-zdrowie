@@ -8,6 +8,7 @@ import { CallButton } from 'src/components/layout/CallButton'
 import { Footer } from 'src/components/layout/Footer'
 import { Navbar } from 'src/components/layout/Navbar'
 import { OfferCard } from 'src/components/layout/OfferCard'
+import navElement from 'src/interfaces/navElement'
 import offerCard from 'src/interfaces/offerCard'
 
 export const Home = () => {
@@ -17,7 +18,7 @@ export const Home = () => {
       description:
         'Wywiad żywieniowy, aby lepiej poznać problem, z którym się do mnie zgłaszasz, jak i Twoje preferencje oraz nawyki żywieniowe',
       Icon: EyeIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-green-700',
       iconTextColor: 'text-white',
     },
@@ -26,7 +27,7 @@ export const Home = () => {
       description:
         'Indywidualny dwutygodniowy jadłospis, który będzie uwzględniał wszystkie Twoje upodobania oraz konkretny problem żywieniowy czy jednostkę chorobową',
       Icon: HeartIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-gray-500',
       iconTextColor: 'text-white',
     },
@@ -35,7 +36,7 @@ export const Home = () => {
       description:
         'Konsultacja odbywać się będzie na drodze on-line, która dla Ciebie będzie najbardziej dogodna i komfortowa',
       Icon: ChatBubbleBottomCenterIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-green-700',
       iconTextColor: 'text-white',
     },
@@ -44,7 +45,7 @@ export const Home = () => {
       description:
         'Wywiad żywieniowy, aby lepiej poznać problem, z którym się do mnie zgłaszasz, jak i Twoje preferencje oraz nawyki żywieniowe',
       Icon: EyeIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-green-700',
       iconTextColor: 'text-white',
     },
@@ -53,7 +54,7 @@ export const Home = () => {
       description:
         'Indywidualny dwutygodniowy jadłospis, który będzie uwzględniał wszystkie Twoje upodobania oraz konkretny problem żywieniowy czy jednostkę chorobową',
       Icon: HeartIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-gray-500',
       iconTextColor: 'text-white',
     },
@@ -62,17 +63,38 @@ export const Home = () => {
       description:
         'Konsultacja odbywać się będzie na drodze on-line, która dla Ciebie będzie najbardziej dogodna i komfortowa',
       Icon: ChatBubbleBottomCenterIcon,
-      minHeight: 250,
+      minHeight: 300,
       iconBackground: 'bg-green-700',
       iconTextColor: 'text-white',
     },
   ]
 
+  const navigation: navElement[] = [
+    { name: 'Home', id: 'home', current: true },
+    { name: 'O mnie', id: 'about', current: false },
+    { name: 'Kontakt', id: 'contact', current: false },
+  ]
+
+  function handleScrollEvent(id: string) {
+    console.log('id: ', id)
+
+    const element = document.getElementById(id)
+
+    console.log('element: ', element)
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
-      <Navbar />
+      <Navbar navElements={navigation} emitScrollEvent={handleScrollEvent} />
       <main>
-        <section className="relative pt-6 pb-30 flex content-center items-center justify-center">
+        <section
+          id="home"
+          className="relative pt-6 pb-30 flex content-center items-center justify-center"
+        >
           <div className="absolute top-0 w-full h-full bg-center  bg-green-700">
             <span id="blackOverlay" className="w-full h-full absolute" />
           </div>
@@ -113,7 +135,7 @@ export const Home = () => {
           <h1 className="text-white font-semibold text-4xl text-center">
             Kompleksowa Opieka Dietetyczna:
           </h1>
-          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-1 mb-10">
+          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
             {offerCards.map((card, i) => (
               <OfferCard
                 key={i}
@@ -127,7 +149,7 @@ export const Home = () => {
             ))}
           </div>
         </section>
-        <section className="relative py-20">
+        <section id="about" className="relative py-20">
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
@@ -312,15 +334,9 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-white border-green-700">
-          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-            <div className="items-center">test</div>
-            <div className="container grid  mx-auto">test</div>
-          </div>
-        </section>
-        {/* <section className="pb-20 relative block bg-gray-900">
+        <section id="contact" className="pb-20 relative block bg-gray-900">
           <div
-            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
             style={{ height: '80px' }}
           >
             <svg
@@ -391,7 +407,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
         {/* <section className="relative block py-24 lg:pt-0 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">

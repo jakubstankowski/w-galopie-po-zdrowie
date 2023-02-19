@@ -30,8 +30,8 @@ export const CallButton = ({
                     ${bgColor}
                     ${textColor}
                     ${borderColor}
-                    ${hoverBackgroundColor}
-                    ${hoverTextColor}`}
+
+                   `}
       >
         {text}
         <PhoneIcon
@@ -39,8 +39,8 @@ export const CallButton = ({
           className={`ml-3 h-4 w-4 mt-1 outline-none"
         ${textColor}
         ${borderColor}
-        ${hoverBackgroundColor}
-        ${hoverTextColor}`}
+        ${bgColor}
+        `}
         />
       </button>
     </a>

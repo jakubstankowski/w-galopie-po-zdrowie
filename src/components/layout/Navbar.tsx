@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import navElement from 'src/interfaces/navElement'
 import { CallButton } from './CallButton'
 
-export const Navbar = () => {
-  const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'O mnie', href: '#', current: false },
-    { name: 'Kontakt', href: '#', current: false },
-  ]
+type NavbarProps = {
+  navElements: navElement[]
+  emitScrollEvent: (id: string) => void
+}
 
+export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
   const [navbar, setNavbar] = useState(false)
   const [colorChange, setColorchange] = useState(false)
 
@@ -22,8 +22,6 @@ export const Navbar = () => {
 
   window.addEventListener('scroll', changeNavbarColor)
 
-  function call() {}
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 fixed top-0 p-4 transition-colors ease-in-out delay-250 z-50 ${
@@ -34,7 +32,13 @@ export const Navbar = () => {
         <div>
           <div className="flex items-center justify-between md:block">
             <a href="javascript:void(0)">
-              <h2 className="text-2xl font-bold text-white">LOGO</h2>
+              <h2
+                className={`text-2xl font-bold ${
+                  colorChange ? 'text-green-700' : 'text-white'
+                }`}
+              >
+                LOGO
+              </h2>
             </a>
             <div className="md:hidden">
               <button
@@ -65,10 +69,11 @@ export const Navbar = () => {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {navigation.map((nav, i) => (
+              {navElements.map((nav, i) => (
                 <li
+                  onClick={() => emitScrollEvent(nav.id)}
                   key={i}
-                  className={`text-white hover:text-indigo-200 ${
+                  className={`hover:text-indigo-200 ${
                     colorChange ? 'text-green-700' : 'text-white'
                   }`}
                 >
@@ -87,9 +92,7 @@ export const Navbar = () => {
                   hoverTextColor={
                     colorChange ? 'hover:text-white' : 'hover:text-green-700'
                   }
-                  hoverBackgroundColor={
-                    colorChange ? 'hover:bg-green-700' : 'hover:bg-white'
-                  }
+                  hoverBackgroundColor="hover:bg-white"
                 />
               </li>
             </ul>
