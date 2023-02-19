@@ -20,6 +20,11 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
     }
   }
 
+  function handleScrollEvent(id: string): void {
+    emitScrollEvent(id)
+    setNavbar(false)
+  }
+
   window.addEventListener('scroll', changeNavbarColor)
 
   return (
@@ -47,13 +52,13 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
               >
                 {navbar ? (
                   <XMarkIcon
-                    className={`h-6 w-6 text-white outline-none ${
+                    className={`h-6 w-6  outline-none ${
                       colorChange ? 'text-green-700' : 'text-white'
                     }`}
                   />
                 ) : (
                   <Bars3Icon
-                    className={`h-6 w-6 text-white outline-none ${
+                    className={`h-6 w-6  outline-none ${
                       colorChange ? 'text-green-700' : 'text-white'
                     }`}
                   />
@@ -71,7 +76,7 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {navElements.map((nav, i) => (
                 <li
-                  onClick={() => emitScrollEvent(nav.id)}
+                  onClick={() => handleScrollEvent(nav.id)}
                   key={i}
                   className={`hover:text-indigo-200 ${
                     colorChange ? 'text-green-700' : 'text-white'

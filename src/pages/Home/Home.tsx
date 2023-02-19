@@ -131,11 +131,11 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-green-700 border-green-700 mb-10">
+        <section className="bg-green-700 border-green-700">
           <h1 className="text-white font-semibold text-4xl text-center">
             Kompleksowa Opieka Dietetyczna:
           </h1>
-          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
+          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-2 sm:py-8 lg:max-w-7xl lg:grid-cols-3">
             {offerCards.map((card, i) => (
               <OfferCard
                 key={i}
@@ -334,27 +334,7 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section id="contact" className="pb-20 relative block bg-gray-900">
-          <div
-            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-            style={{ height: '80px' }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-gray-900 fill-current"
-                points="2560 0 2560 100 0 100"
-              />
-            </svg>
-          </div>
-
+        <section id="contact" className="relative block bg-white">
           <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">

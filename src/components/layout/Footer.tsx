@@ -1,10 +1,12 @@
 export const Footer = () => {
   return (
-    <footer className="relative bg-white pt-8 pb-6">
+    <footer className="relative bg-gray-900 pt-8 pb-6 text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl font-semibold">Let's keep in touch!</h4>
+            <h4 className="text-white text-3xl font-semibold">
+              Let's keep in touch!
+            </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
