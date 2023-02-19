@@ -42,7 +42,7 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
                   colorChange ? 'text-green-700' : 'text-white'
                 }`}
               >
-                LOGO
+                W Galopie Po Zdrowie
               </h2>
             </a>
             <div className="md:hidden">
