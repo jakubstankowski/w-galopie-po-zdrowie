@@ -10,6 +10,7 @@ import { Navbar } from 'src/components/layout/Navbar'
 import { OfferCard } from 'src/components/layout/OfferCard'
 import navElement from 'src/interfaces/navElement'
 import offerCard from 'src/interfaces/offerCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Home = () => {
   const offerCards: offerCard[] = [
@@ -76,11 +77,7 @@ export const Home = () => {
   ]
 
   function handleScrollEvent(id: string) {
-    console.log('id: ', id)
-
     const element = document.getElementById(id)
-
-    console.log('element: ', element)
 
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -159,18 +156,28 @@ export const Home = () => {
                   src={require('assets/img/woman.png')}
                 />
                 <div className="flex justify-center mt-7">
-                  <CallButton
-                    bgColor="bg-white"
-                    text="Umów wizytę"
-                    phoneNumber="tel:+48792662662"
-                    borderColor="border-green-700"
-                    textColor="text-green-700"
-                    hoverTextColor="hover:text-green-700"
-                    hoverBackgroundColor="hover:bg-white"
-                  />
+                  <button
+                    className="bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                  </button>
+                  <button
+                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                  </button>
+                  <button
+                    onClick={() => window.open('mailto:test@example.com')}
+                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <FontAwesomeIcon icon="envelope" />
+                  </button>
                 </div>
               </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4 text-center">
                 <div className="md:pr-12">
                   <h3 className="text-3xl font-semibold">Lorem Ipsum</h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -178,26 +185,21 @@ export const Home = () => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
-                  <div className="mt-6">
-                    <button
-                      className="bg-green-700 text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                      type="button"
-                    >
-                      <i className="flex fab fa-twitter" />
-                    </button>
-                    <button
-                      className="ml-2 bg-green-700 text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                      type="button"
-                    >
-                      <i className="flex fab fa-facebook-square" />
-                    </button>
-                    <button
-                      className="ml-2 bg-green-700 text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                      type="button"
-                    >
-                      <i className="flex fab fa-dribbble" />
-                    </button>
+                  <div className="mt-10 text-center align-center">
+                    <CallButton
+                      bgColor="bg-white"
+                      text="Umów wizytę"
+                      phoneNumber="tel:+48792662662"
+                      borderColor="border-green-700"
+                      textColor="text-green-700"
+                      hoverTextColor="hover:text-green-700"
+                      hoverBackgroundColor="hover:bg-white"
+                    />
                   </div>
                 </div>
               </div>
