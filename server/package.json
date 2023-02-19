@@ -1,0 +1,16 @@
+{
+  "name": "qtui-server",
+  "version": "1.0.0",
+  "description": "Quasiris Tools UI Server",
+  "author": "Quasiris",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}
