@@ -36,6 +36,15 @@ export const Home = () => {
             <span id="blackOverlay" className="w-full h-full absolute" />
           </div>
           <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+            <div>
+              <div className="items-center w-full">
+                <img
+                  alt="Home basile photo"
+                  src={require('assets/img/logo-green.png')}
+                  style={{ maxWidth: '600px' }}
+                />
+              </div>
+            </div>
             <div className="items-center">
               <h1 className="text-white font-semibold text-3xl text-center">
                 {mainText.homeTitle}
@@ -52,14 +61,6 @@ export const Home = () => {
                   textColor="text-green-700"
                   hoverTextColor="hover:text-green-700"
                   hoverBackgroundColor="hover:bg-white"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="w-full">
-                <img
-                  alt="Home basile photo"
-                  src={require('assets/img/home-photo.png')}
                 />
               </div>
             </div>
@@ -157,18 +158,14 @@ export const Home = () => {
           </div>
         </section>
         <hr />
-        <section
-          id="contact"
-          className="bg-gray-300 relative block"
-          style={{ minHeight: '75vh' }}
-        >
+        <section id="contact" className="bg-gray-300 relative block">
           <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
             <div className="container grid  mx-auto items-center justify-center align-center">
               <div className="w-full">
                 <img
                   alt="Home basile photo"
-                  src={require('assets/img/logo-green.png')}
-                  style={{ maxWidth: '300px' }}
+                  src={require('assets/img/logo-gray.png')}
+                  style={{ maxWidth: '700px' }}
                 />
               </div>
             </div>
