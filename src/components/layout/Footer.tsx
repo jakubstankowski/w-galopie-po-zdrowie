@@ -15,18 +15,34 @@ export const Footer = () => {
               </h5>
               <div className="mt-6">
                 <div className="flex justify-center mt-7" />
-                <button
-                  className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
+                <a
+                  href={contactDetails.facebookProfile}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-                </button>
-                <button
-                  className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
+                  <button
+                    className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                  </button>
+                </a>
+                <a
+                  href={contactDetails.instagramProfile}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={['fab', 'instagram']} />
-                </button>
+                  <button
+                    onClick={() =>
+                      window.open(`mailto:${contactDetails.emailAdress}`)
+                    }
+                    className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                  >
+                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                  </button>
+                </a>
+                f
                 <button
                   className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"

@@ -47,7 +47,7 @@ export const Home = () => {
                 <CallButton
                   bgColor="bg-white"
                   text="Umów wizytę"
-                  phoneNumber="tel:+48792662662"
+                  phoneNumber={contactDetails.phoneNumber}
                   borderColor="border-white"
                   textColor="text-green-700"
                   hoverTextColor="hover:text-green-700"
@@ -55,7 +55,7 @@ export const Home = () => {
                 />
               </div>
             </div>
-            <div className="container grid  mx-auto">
+            <div>
               <div className="w-full">
                 <img
                   alt="Home basile photo"

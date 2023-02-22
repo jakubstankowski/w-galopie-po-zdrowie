@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import navElement from 'src/interfaces/navElement'
+import { contactDetails } from 'src/resources/contact'
 import { CallButton } from './CallButton'
 
 type NavbarProps = {
@@ -89,7 +90,7 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
                 <CallButton
                   bgColor={colorChange ? 'bg-green-700' : 'bg-white'}
                   text="Umów wizytę"
-                  phoneNumber="tel:+48792662662"
+                  phoneNumber={contactDetails.phoneNumber}
                   borderColor={
                     colorChange ? 'border-green-700' : 'border-white'
                   }
