@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { contactDetails } from 'src/resources/contact'
 
 export const Footer = () => {
   return (
@@ -38,7 +39,7 @@ export const Footer = () => {
           <div className="text-right">
             <h5 className="text-right text-gray-700">
               W Galopie Po Zdrowie <br />
-              Radom, Tel: 792-662-622
+              Radom, Tel: {contactDetails.phoneNumber}
             </h5>
           </div>
         </div>
