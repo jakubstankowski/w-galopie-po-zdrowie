@@ -8,10 +8,9 @@ export const Footer = () => {
         <div className="container  grid max-w-2xl grid-cols-1 items-center  lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div>
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-white text-3xl font-semibold">Lorem ipsum</h4>
               <h5 className="text-lg mt-0 mb-2 text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
+                „Najlepszymi lekarzami na świecie są: doktor dieta, doktor
+                spokój i doktor dobry humor”
               </h5>
               <div className="mt-6">
                 <div className="flex justify-center mt-7" />
@@ -39,10 +38,7 @@ export const Footer = () => {
           <div className="text-right">
             <h5 className="text-right text-gray-700">
               W Galopie Po Zdrowie <br />
-              ul. Ulicowa 17 <br />
-              26-600 Radom <br />
-              NIP 111 222 333 <br />
-              Tel. 555 666 777
+              Radom, Tel: 792-662-622
             </h5>
           </div>
         </div>
