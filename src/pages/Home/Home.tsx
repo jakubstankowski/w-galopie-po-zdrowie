@@ -104,8 +104,6 @@ export const Home = () => {
                       phoneNumber="tel:+48792662662"
                       borderColor="border-green-700"
                       textColor="text-green-700"
-                      hoverTextColor="hover:text-green-700"
-                      hoverBackgroundColor="hover:bg-white"
                     />
                   </div>
                 </div>
@@ -123,10 +121,10 @@ export const Home = () => {
                     rel="noreferrer"
                   >
                     <button
-                      className="bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                      className="bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                       type="button"
                     >
-                      <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                      <FontAwesomeIcon icon={['fab', 'facebook-f']} size="2x" />
                     </button>
                   </a>
                   <a
@@ -135,20 +133,20 @@ export const Home = () => {
                     rel="noreferrer"
                   >
                     <button
-                      className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                      className="ml-2 bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                       type="button"
                     >
-                      <FontAwesomeIcon icon={['fab', 'instagram']} />
+                      <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
                     </button>
                   </a>
                   <button
                     onClick={() =>
                       window.open(`mailto:${contactDetails.emailAdress}`)
                     }
-                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                     type="button"
                   >
-                    <FontAwesomeIcon icon="envelope" />
+                    <FontAwesomeIcon icon="envelope" size="2x" />
                   </button>
                 </div>
               </div>
@@ -180,10 +178,10 @@ export const Home = () => {
                   rel="noreferrer"
                 >
                   <button
-                    className="bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                     type="button"
                   >
-                    <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                    <FontAwesomeIcon icon={['fab', 'facebook-f']} size="2x" />
                   </button>
                 </a>
 
@@ -193,10 +191,10 @@ export const Home = () => {
                   rel="noreferrer"
                 >
                   <button
-                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="ml-2 bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                     type="button"
                   >
-                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
                   </button>
                 </a>
 
@@ -204,10 +202,10 @@ export const Home = () => {
                   onClick={() =>
                     window.open(`mailto:${contactDetails.emailAdress}`)
                   }
-                  className="ml-2 bg-green-700 text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="ml-2 bg-green-700 text-white shadow-lg font-normal h-14 w-14 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <FontAwesomeIcon icon="envelope" />
+                  <FontAwesomeIcon icon="envelope" size="2x" />
                 </button>
               </div>
             </div>
