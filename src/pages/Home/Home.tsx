@@ -40,7 +40,7 @@ export const Home = () => {
               <div className="w-full">
                 <img
                   alt="Home basile photo"
-                  src={require('assets/img/logo-green.png')}
+                  src={require('assets/img/logo-green.webp')}
                   style={{ maxWidth: '700px' }}
                 />
               </div>
@@ -93,7 +93,7 @@ export const Home = () => {
                 <img
                   alt="..."
                   className="w-full rounded-lg"
-                  src={require('assets/img/woman.jpg')}
+                  src={require('assets/img/owner.webp')}
                 />
                 <div className="flex justify-center mt-7">
                   <a
@@ -160,7 +160,7 @@ export const Home = () => {
               <div className="w-full">
                 <img
                   alt="Home basile photo"
-                  src={require('assets/img/logo-gray.png')}
+                  src={require('assets/img/logo-gray.webp')}
                   style={{ maxWidth: '700px' }}
                 />
               </div>

@@ -60,7 +60,7 @@ const config = {
         ],
       },
       {
-        test: /.*\.(gif|png|jpe?g)$/i,
+        test: /.*\.(gif|png|jpe?g|webp)$/i,
         type: 'asset/resource'
       },
       {
