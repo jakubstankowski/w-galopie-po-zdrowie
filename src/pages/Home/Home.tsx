@@ -4,7 +4,6 @@ import { Navbar } from 'src/components/layout/Navbar'
 import { OfferCard } from 'src/components/layout/OfferCard'
 import navElement from 'src/interfaces/navElement'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { contactDetails } from 'src/resources/contact'
 import { mainText } from 'src/resources/text'
 import { offerCards } from 'src/resources/cards'
@@ -59,8 +58,6 @@ export const Home = () => {
                   phoneNumber={contactDetails.phoneNumber}
                   borderColor="border-white"
                   textColor="text-green-700"
-                  hoverTextColor="hover:text-green-700"
-                  hoverBackgroundColor="hover:bg-white"
                 />
               </div>
             </div>
@@ -70,13 +67,14 @@ export const Home = () => {
           <h1 className="text-white font-semibold text-4xl text-center">
             Kompleksowa Opieka Dietetyczna:
           </h1>
-          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-2 sm:py-8 lg:max-w-7xl lg:grid-cols-3">
+          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-2 sm:py-8 lg:max-w-7xl lg:grid-cols-2">
             {offerCards.map((card, i) => (
               <OfferCard
                 key={i}
                 title={card.title}
                 description={card.description}
-                Icon={card.Icon}
+                icon={card.icon}
+                iconSize={card.iconSize}
                 minHeight={card.minHeight}
                 iconBackground={card.iconBackground}
                 iconTextColor={card.iconTextColor}
@@ -116,7 +114,7 @@ export const Home = () => {
                 <img
                   alt="..."
                   className="w-full rounded-lg"
-                  src={require('assets/img/woman-2.jpg')}
+                  src={require('assets/img/woman.jpg')}
                 />
                 <div className="flex justify-center mt-7">
                   <a

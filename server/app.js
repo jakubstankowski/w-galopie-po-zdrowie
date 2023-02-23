@@ -15,18 +15,19 @@ app.use(compression())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(function(req, res, next) {
-    if ((req.get('X-Forwarded-Proto') !== 'https')) {
-        res.redirect('https://' + req.get('Host') + req.url);
-    } else
-        next();
-});
+// app.use(function(req, res, next) {
+//     if ((req.get('X-Forwarded-Proto') !== 'https')) {
+//         res.redirect('https://' + req.get('Host') + req.url);
+//     } else
+//         next();
+// });
 
 app.use("/", express.static(path.join(__dirname, "dist")));
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
+console.log(`Running on :${PORT}`);
 
 app.use(cors());
 app.listen(PORT);

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import navElement from 'src/interfaces/navElement'
 import { contactDetails } from 'src/resources/contact'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { icons } from 'src/resources/icons'
 import { CallButton } from './CallButton'
 
 type NavbarProps = {
@@ -51,19 +52,13 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
                 className="p-2 text-white rounded-md outline-none"
                 onClick={() => setNavbar(!navbar)}
               >
-                {navbar ? (
-                  <XMarkIcon
-                    className={`h-6 w-6  outline-none ${
-                      colorChange ? 'text-green-700' : 'text-white'
-                    }`}
-                  />
-                ) : (
-                  <Bars3Icon
-                    className={`h-6 w-6  outline-none ${
-                      colorChange ? 'text-green-700' : 'text-white'
-                    }`}
-                  />
-                )}
+                <FontAwesomeIcon
+                  icon={
+                    navbar ? icons.circleChevronUp : icons.circleChevronDown
+                  }
+                  size="2x"
+                  className={`${colorChange ? 'text-green-700' : 'text-white'}`}
+                />
               </button>
             </div>
           </div>
@@ -94,11 +89,7 @@ export const Navbar = ({ navElements, emitScrollEvent }: NavbarProps) => {
                   borderColor={
                     colorChange ? 'border-green-700' : 'border-white'
                   }
-                  textColor={colorChange ? 'text-white' : 'bg-green-700'}
-                  hoverTextColor={
-                    colorChange ? 'hover:text-white' : 'hover:text-green-700'
-                  }
-                  hoverBackgroundColor="hover:bg-white"
+                  textColor={colorChange ? 'text-white' : 'text-green-700'}
                 />
               </li>
             </ul>

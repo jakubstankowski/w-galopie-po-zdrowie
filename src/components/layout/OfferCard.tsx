@@ -1,7 +1,11 @@
+import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 type OfferCardProps = {
   title: string
   description: string
-  Icon: React.ElementType
+  icon: IconProp
+  iconSize: SizeProp
   minHeight: number
   iconBackground: string
   iconTextColor: string
@@ -10,10 +14,10 @@ type OfferCardProps = {
 export const OfferCard = ({
   title,
   description,
-  Icon,
+  icon,
   minHeight,
   iconBackground,
-  iconTextColor,
+  iconSize = '2x',
 }: OfferCardProps) => {
   return (
     <div className="container mx-auto px-4">
@@ -27,7 +31,7 @@ export const OfferCard = ({
               <div
                 className={`text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full ${iconBackground}`}
               >
-                <Icon className={`h-8 w-8 outline-none ${iconTextColor}`} />
+                <FontAwesomeIcon size={iconSize} icon={icon} />
               </div>
               <h6 className="text-xl font-semibold">{title}</h6>
               <p className="mt-2 mb-4 text-gray-600">{description}</p>

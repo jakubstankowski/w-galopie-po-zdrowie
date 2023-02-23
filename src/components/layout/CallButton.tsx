@@ -1,12 +1,11 @@
-import { PhoneIcon } from '@heroicons/react/24/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { icons } from 'src/resources/icons'
 
 type CallButtonProps = {
   text: string
   phoneNumber: string
   bgColor: string
   textColor: string
-  hoverBackgroundColor: string
-  hoverTextColor: string
   borderColor: string
 }
 
@@ -15,8 +14,6 @@ export const CallButton = ({
   phoneNumber,
   bgColor,
   textColor,
-  hoverBackgroundColor,
-  hoverTextColor,
   borderColor,
 }: CallButtonProps) => {
   function callHandler() {}
@@ -34,9 +31,11 @@ export const CallButton = ({
                    `}
       >
         {text}
-        <PhoneIcon
+        <FontAwesomeIcon
+          size="1x"
+          icon={icons.phone}
           style={{ float: 'right' }}
-          className={`ml-3 h-4 w-4 mt-1 outline-none"
+          className={`ml-3 mt-1 outline-none"
         ${textColor}
         ${borderColor}
         ${bgColor}
