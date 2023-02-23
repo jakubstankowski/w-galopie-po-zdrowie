@@ -16,12 +16,9 @@ export const CallButton = ({
   textColor,
   borderColor,
 }: CallButtonProps) => {
-  function callHandler() {}
-
   return (
-    <a href={phoneNumber}>
+    <a href={`tel:${phoneNumber}`}>
       <button
-        onClick={callHandler}
         className={`w-150
                     py-2 px-4 border rounded
                     ${bgColor}
