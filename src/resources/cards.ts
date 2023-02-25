@@ -9,7 +9,7 @@ export const offerCards: offerCard[] = [
     icon: icons.phone,
     iconSize: '2x',
     minHeight: 270,
-    iconBackground: 'bg-green-700',
+    iconBackground: 'bg-gray-500',
     iconTextColor: 'text-white',
   },
   {
@@ -29,7 +29,7 @@ export const offerCards: offerCard[] = [
     icon: icons.scaleBalanced,
     iconSize: '2x',
     minHeight: 270,
-    iconBackground: 'bg-green-700',
+    iconBackground: 'bg-gray-500',
     iconTextColor: 'text-white',
   },
   {
@@ -39,7 +39,7 @@ export const offerCards: offerCard[] = [
     icon: icons.comments,
     iconSize: '2x',
     minHeight: 270,
-    iconBackground: 'bg-green-700',
+    iconBackground: 'bg-gray-500',
     iconTextColor: 'text-white',
   },
 ]

@@ -13,6 +13,7 @@ export const Home = () => {
   const navigation: navElement[] = [
     { name: 'Home', id: 'home', current: true },
     { name: 'O mnie', id: 'about', current: false },
+    { name: 'Cennik', id: 'price-list', current: false },
     { name: 'Kontakt', id: 'contact', current: false },
   ]
 
@@ -151,6 +152,14 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section id="price-list" className="relative py-20">
+          <h1 className="text-green-700 font-semibold text-4xl text-center">
+            Cennik:
+          </h1>
+          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-2 sm:py-8 lg:max-w-7xl lg:grid-cols-2">
+            test
           </div>
         </section>
         <hr />
