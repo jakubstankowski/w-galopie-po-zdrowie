@@ -1,6 +1,6 @@
 export const mainText = {
   homeTitle:
-    'Pozwól, że wskażę Ci odpowiedni kierunek, abyś mógł kroczyć prostą drogą bez zakrętów!' as string,
+    'Pozwól, że wskażę Ci odpowiedni kierunek, abyś mógł kroczyć drogą bez zakrętów!' as string,
   homeDescription:
     'Nauczę Cię jeść w sposób naturalny i swobodny, tak by jedzenie nie wiązało się z poczuciem straty czy wyrzeczenia. Zaprojektuję specjalny program odżywiania pozwalający czuć się dobrze i będę Cię motywować i wspierać. Pomogę Ci uwierzyć w siebie! Ja już w Ciebie wierzę!' as string,
   aboutDescription:

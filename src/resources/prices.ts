@@ -5,7 +5,7 @@ export const prices: pricesList[] = [
     category: 'Indywidualne konsultacje',
     cards: [
       {
-        title: 'Pierwsza wizyta',
+        title: 'Pierwsza wizyta  mobilna',
         price: 200,
         descriptionTitle: 'Konsultacja z dietetykiem obejmująca m.in.:',
         descriptionList: [
@@ -15,7 +15,7 @@ export const prices: pricesList[] = [
         ],
       },
       {
-        title: 'Wizyta kontrolna',
+        title: 'Wizyta kontrolna  mobilna',
         price: 100,
         descriptionTitle: 'Konsultacja z dietetykiem obejmująca:',
         descriptionList: [
@@ -32,12 +32,16 @@ export const prices: pricesList[] = [
       {
         title: 'Jadłospis 7 dni',
         price: 179,
-        descriptionList: ['Indywidualny jadłospis na 7 dni wraz z przepisami'],
+        descriptionList: [
+          'Indywidualny jadłospis na 7 dni wraz z przepisami  i listą zakupów',
+        ],
       },
       {
         title: 'Jadłospis 14 dni',
         price: 249,
-        descriptionList: ['Indywidualny jadłospis na 14 dni wraz z przepisami'],
+        descriptionList: [
+          'Indywidualny jadłospis na 14 dni wraz z przepisami  i listą zakupów',
+        ],
       },
     ],
   },

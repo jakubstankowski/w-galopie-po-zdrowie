@@ -5,7 +5,7 @@ export const offerCards: offerCard[] = [
   {
     title: 'Mobilna konsultacja dietetyczna',
     description:
-      'Szczegółowy wywiad żywieniowy, aby lepiej poznać problem, z którym się do mnie zgłaszasz, jak i Twoje preferencje oraz nawyki żywieniowe. Każda następna konsultacja obejmuje diet coaching, specjalistyczne konsultacje żywieniowe, wyjaśnienie zaistniałych problemów w trakcie stosowania diety.',
+      'Dojazd do klienta. Szczegółowy wywiad żywieniowy, aby lepiej poznać problem, z którym się do mnie zgłaszasz, jak i Twoje preferencje oraz nawyki żywieniowe. Każda następna konsultacja obejmuje diet coaching, specjalistyczne konsultacje żywieniowe, wyjaśnienie zaistniałych problemów w trakcie stosowania diety.',
     icon: icons.phone,
     iconSize: '2x',
     minHeight: 270,
