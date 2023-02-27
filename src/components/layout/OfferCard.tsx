@@ -34,7 +34,7 @@ export const OfferCard = ({
                 <FontAwesomeIcon size={iconSize} icon={icon} />
               </div>
               <h6 className="text-xl font-semibold">{title}</h6>
-              <p className="mt-2 mb-4 text-gray-600">{description}</p>
+              <p className="mt-2 mb-4 text-gray-900">{description}</p>
             </div>
           </div>
         </div>

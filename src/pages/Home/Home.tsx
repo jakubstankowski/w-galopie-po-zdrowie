@@ -8,6 +8,7 @@ import { contactDetails } from 'src/resources/contact'
 import { mainText } from 'src/resources/text'
 import { offerCards } from 'src/resources/cards'
 import { icons } from 'src/resources/icons'
+import { PricesListCard } from 'src/components/layout/PricesListCard'
 
 export const Home = () => {
   const navigation: navElement[] = [
@@ -142,7 +143,7 @@ export const Home = () => {
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div>
-                  <p className="mt-4 text-lg leading-relaxed text-gray-600 text-left">
+                  <p className="mt-4 text-lg leading-relaxed text-gray-900 text-left">
                     <span
                       dangerouslySetInnerHTML={{
                         __html: mainText.aboutDescription,
@@ -156,11 +157,72 @@ export const Home = () => {
         </section>
         <section id="price-list" className="relative py-20">
           <h1 className="text-green-700 font-semibold text-4xl text-center">
-            Cennik:
+            Cennik
           </h1>
-          <div className="container relative mx-auto grid max-w-2xl grid-cols-1 items-center  sm:px-2 sm:py-8 lg:max-w-7xl lg:grid-cols-2">
-            test
+          <p className="mt-10  text-gray-900 text-3xl text-center">
+            Indywidualny jadłospis:
+          </p>
+          <div className="container relative mx-auto grid  grid-cols-1 items-center  px-4 lg:grid-cols-2 mt-10">
+            <div className="container grid  mx-auto items-center justify-center align-center ">
+              <div
+                className="max-w-sm  items-center justify-center align-center p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-30"
+                style={{ minWidth: '500px' }}
+              >
+                <p className="text-2xl text-gray-900 mb-3">
+                  Jadłospis 7 dni - 179 zł
+                </p>
+                <p className="text-gray-900 text-left">
+                  Konsultacja z dietetykiem obejmująca m.in.:
+                </p>
+                <ul className="text-left">
+                  <li>- Indywidualny jadłospis na 7 dni wraz z przepisami</li>
+                  <li>
+                    - Autorski poradnik żywieniowy zawierający listę produktów i
+                    potraw zalecanych i niewskazanych
+                  </li>
+                </ul>
+                <div className="container text-center  mt-10">
+                  <CallButton
+                    bgColor="bg-white"
+                    text="Umów wizytę"
+                    phoneNumber={contactDetails.phoneNumber}
+                    borderColor="border-green-700"
+                    textColor="text-green-700"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="container grid  mx-auto items-center justify-center align-center">
+              <div
+                className="max-w-sm  items-center justify-center align-center p-6 bg-white border border-gray-200 rounded-lg shadow"
+                style={{ minWidth: '500px' }}
+              >
+                <p className="text-2xl text-gray-900 mb-3">
+                  Jadłospis 7 dni - 179 zł
+                </p>
+                <p className="text-gray-900 text-left">
+                  Konsultacja z dietetykiem obejmująca m.in.:
+                </p>
+                <ul className="text-left">
+                  <li>- Indywidualny jadłospis na 7 dni wraz z przepisami</li>
+                  <li>
+                    - Autorski poradnik żywieniowy zawierający listę produktów i
+                    potraw zalecanych i niewskazanych
+                  </li>
+                </ul>
+                <div className="container text-center  mt-10">
+                  <CallButton
+                    bgColor="bg-white"
+                    text="Umów wizytę"
+                    phoneNumber={contactDetails.phoneNumber}
+                    borderColor="border-green-700"
+                    textColor="text-green-700"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
+          {/* <PricesListCard title="test" /> */}
         </section>
         <hr />
         <section id="contact" className="bg-gray-300 relative block">
@@ -175,11 +237,13 @@ export const Home = () => {
               </div>
             </div>
             <div className="text-center">
-              <h5 className="text-gray-700 text-3xl">
-                <strong>W Galopie Po Zdrowie </strong>
+              <p className="text-gray-900 text-2xl text-gray-500">
+                <strong className="text-green-700">
+                  W Galopie Po Zdrowie{' '}
+                </strong>
                 <br /> <br />
                 Radom, Tel: 792-662-622
-              </h5>
+              </p>
               <div className="flex justify-center mt-7">
                 <a
                   href={contactDetails.facebookProfile}

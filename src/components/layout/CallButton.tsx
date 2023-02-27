@@ -24,7 +24,6 @@ export const CallButton = ({
                     ${bgColor}
                     ${textColor}
                     ${borderColor}
-
                    `}
       >
         {text}
