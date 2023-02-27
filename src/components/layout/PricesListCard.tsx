@@ -3,34 +3,48 @@ import { CallButton } from './CallButton'
 
 type PricesListCardProps = {
   title: string
+  price: number
+  descriptionTitle: string
+  descriptionList: string[]
 }
 
-export const PricesListCard = ({ title }: PricesListCardProps) => {
+export const PricesListCard = ({
+  title,
+  price,
+  descriptionTitle,
+  descriptionList,
+}: PricesListCardProps) => {
   return (
-    <div className=" mt-10 container grid  gap-4  items-center justify-center align-center relative text-center mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-12 lg:px-6 px-6 lg:max-w-7xl">
-      <div
-        className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
-        style={{ minWidth: '500px' }}
-      >
-        <p className="text-2xl text-gray-900 mb-3">Jadłospis 7 dni - 179 zł</p>
-        <p className="text-gray-900 text-left">
-          Konsultacja z dietetykiem obejmująca m.in.:
-        </p>
-        <ul className="text-left">
-          <li>- Indywidualny jadłospis na 7 dni wraz z przepisami</li>
-          <li>
-            - Autorski poradnik żywieniowy zawierający listę produktów i potraw
-            zalecanych i niewskazanych
-          </li>
-        </ul>
-        <div className="container text-center  mt-10">
-          <CallButton
-            bgColor="bg-white"
-            text="Umów wizytę"
-            phoneNumber={contactDetails.phoneNumber}
-            borderColor="border-green-700"
-            textColor="text-green-700"
-          />
+    <div className="container mx-auto px-4">
+      <div className="flex flex-wrap">
+        <div className="lg:pt-12 pt-6 w-full  px-4 text-center">
+          <div
+            style={{ minHeight: '300px' }}
+            className="bg-white relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div className="px-4 py-5 flex-auto">
+              <h6 className="text-2xl font-semibold ">
+                {title} - {price} zł
+              </h6>
+              <p className="mt-2 mb-4 text-gray-900 text-left">
+                {descriptionTitle}
+              </p>
+              <ul className="text-left">
+                {descriptionList.map((desc, i) => (
+                  <li>- {desc}</li>
+                ))}
+              </ul>
+              <div className="container text-center  mt-10">
+                <CallButton
+                  bgColor="bg-white"
+                  text="Umów wizytę"
+                  phoneNumber={contactDetails.phoneNumber}
+                  borderColor="border-green-700"
+                  textColor="text-green-700"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
