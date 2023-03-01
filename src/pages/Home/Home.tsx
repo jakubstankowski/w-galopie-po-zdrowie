@@ -53,7 +53,7 @@ export const Home = () => {
               <h1 className="text-white font-semibold text-3xl text-center">
                 {mainText.homeTitle}
               </h1>
-              <p className="mt-4 text-lg text-gray-300 text-center text-3xl">
+              <p className="mt-4 text-lg text-white text-center text-3xl">
                 {mainText.homeDescription}
               </p>
               <div className="flex justify-center mt-7">
